@@ -1,0 +1,68 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:#FAFAFA;
+}
+
+
+input{
+  font: inherit;
+}
+a{
+  text-decoration: none;
+}
+
+
+.gridItem{
+position: relative;
+cursor: pointer;
+}
+
+.icons{
+  position: absolute ;
+  top: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  gap: 14px;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
+
+.gridItem:hover::before{
+  content:'';
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  opacity: 1;
+}
+
+.gridItem:hover .icons{
+  opacity: 1;
+}
+
+@media screen and (max-width:900px) {
+  .gridContainer{
+  
+    grid-template-columns: 1fr !important;
+  }
+  #gridItem{
+    max-width: 100%;
+  }
+  #gridItem2{
+    display: none;
+  }
+  .profileGrid{
+
+  }
+}
